@@ -1,0 +1,116 @@
+.error-page-main{
+  background: url("./images/error-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  .simple-navbar{
+    display: block;
+  }
+  .mobile-header{
+    display: none;
+  }
+  .copyright-footer{
+    display: block;
+  }
+
+.error-content {
+  min-height: 1054px;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 259px;
+
+  .errcontent-part{
+    width: 740px;
+    margin: auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .fbbg {
+    padding: 50px 0;
+  }
+  .title {
+    font-size: 100px;
+    color: #557793;
+    line-height: 120px;
+  }
+  .des-info {
+    font-size: 18px;
+    color: #557793;
+    line-height: 30px;
+  }
+  .btn-group {
+    padding: 28px 0 50px;
+    a{
+       width: 120px;
+       height: 40px;
+       line-height: 40px;
+       display: inline-block;
+       border-radius: 3px;
+       text-align: center;
+       font-size: 14px;
+       color: #ffffff;
+    }
+    .blue-btn{
+      background: #5087FF;
+    }
+    .orange-btn{
+      background: #FF9600;
+    }
+    .interval{
+       margin-right: 20px;
+    }
+  }
+ }
+}
+
+@media only screen and (max-width: 999px) {
+  .error-page-main{
+     background: none;
+
+    .simple-navbar{
+      display: none;
+    }
+    .mobile-header{
+      display: block;
+    }
+    .copyright-footer{
+      display: none;
+    }
+
+     .error-content{
+       min-height: initial;
+       padding-top: 60px;
+
+       .errcontent-part{
+         width: 90%;
+         background: transparent;
+         border-radius: initial;
+       }
+       .fbbg{
+         padding: 0 0 20px;
+       }
+       .title{
+         font-size: 60px;
+         line-height: 80px;
+       }
+       .des-info{
+         font-size: 20px;
+         line-height: 30px;
+       }
+       .btn-group{
+         padding: 30px 0 50px;
+         a{
+           width: 100%;
+           height: 50px;
+           line-height: 50px;
+           font-size: 18px;
+         }
+         .interval{
+           margin-bottom: 10px;
+         }
+       }
+     }
+  }
+
+}

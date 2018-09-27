@@ -1,0 +1,20 @@
+@function r($px, $base-font-size:75) {
+  @return (($px*4.636)/$base-font-size)*1rem;
+}
+@mixin f($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size*1.5;
+  }
+}
+
+$body-bg: #F5F5F5;
+$white: #ffffff;
+$main-color: #4982FF; // 主色调
+$font-color: #333333; //字体颜色
+$header-hg: 44;
+$footer-hg: 49;
+$font-chatroom-color:#fff

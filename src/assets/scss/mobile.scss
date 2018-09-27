@@ -1,0 +1,275 @@
+/**
+*** mobile scss
+*** Anne 2018/05/23
+**/
+
+@import "./mixin.scss";
+select::-ms-expand{display:none;}
+select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  width: 100%;
+  background: #fff url(~images/xl.png) no-repeat right center;
+  background-size: 30px;
+  padding: 0 40px 0 3%;
+  color: #666;
+}
+.mobilenav-tabs{
+  margin:r(15) auto;
+  width: 80%;
+  border-radius: r(5);
+  overflow: hidden;
+  span,li{
+    display:inline-block;
+    width:50%;
+    height: r(35);
+    line-height: r(35);
+    text-align: center;
+    cursor: pointer;
+    @include  f(15px);
+    color: $font-color;
+    border-radius: 0 r(5) r(5) 0;
+    background: $white;
+    user-select: none;
+    &:first-child{
+      border-radius: r(5) 0 0 r(5);
+      float:left;
+    }
+    &:last-child{
+      float:right;
+    }
+    &.active{
+      background: #86A5F8;
+      color: $white;
+    }
+  }
+}
+
+
+
+/*  mobile 表单 */
+.mobile-navtabs{
+  @include f(16px);
+  color: #000000;
+  border-bottom:1px solid #D8D8D8;
+  background: $white;
+  .s{
+    width: 33.33%;
+    display:block;
+    float: left;
+    height:r(52);
+    line-height: r(52);
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    &.active{
+      color: #4982FF;
+      border-bottom:1px solid #4982FF;
+    }
+  }
+}
+ul.mregister-nav .s{
+  width: 50%;
+}
+.mobile-form-box{
+  padding: 0 r(10) r(50);
+  .form-group {
+    line-height: r(40);
+    position: relative;
+    padding-top: r(30);
+    width: 100%;
+  }
+  p {
+    color: #666666;
+    display: block;
+    @include  f(16px);
+    width: 8%;
+    float: left;
+    &.icon-verifcode{
+      @include  f(18px);
+    }
+  }
+  .captcha-code {
+    width:r(90);
+    float: left;
+    display: block;
+    position: relative;
+    background: no-repeat;
+
+    img {
+      height: r(34);
+      width: r(90);
+      vertical-align: top;
+    }
+  }
+  .form-input{
+    border-bottom: 1px solid #D8D8D8;
+    float: left;
+    width: 92%;
+    .captcha-code{
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      color:#555;
+      line-height: normal;
+      background: #86A5F8;
+      border-radius: r(3);
+      @include  f(12px);
+      padding:r(10);
+      color: #FFFFFF;
+      text-align: center;
+      width: auto;
+    }
+  }
+  .select-country{
+    width: 25%;
+    height: r(40);
+    line-height: r(40);
+    border: none;
+    color:#333;
+    cursor: pointer;
+    background: url(~images/xl.png) no-repeat right center;
+    background-size: 30px;
+    padding: 0 40px 0 0;
+    @include  f(16px);
+    float: left;
+  }
+  .form-subtitle{
+    display: block;
+    width: 20%;
+    float: left;
+  }
+  .again-pwd{
+    letter-spacing: -2px;
+  }
+  .ps-input {
+    width: 80%;
+    float: left;
+    height: r(40);
+    border: none;
+    outline: none;
+    line-height: r(40);
+    @include  f(16px);
+    color: #333;
+    background: none;
+  }
+  .mobile-input{
+    width: 55%;
+  }
+  .ps-input2 {
+    width: 100%;
+    float: left;
+    height: r(50);
+    outline: 0;
+    line-height: r(50);
+    @include  f(16px);
+    color: #333;
+    padding: 0 r(20);
+  }
+  .link-group{
+     line-height: r(48);
+  }
+  .link-register{
+    display: block;
+    @include  f(18px);
+    color: #4982FF;
+  }
+
+  i.iconfont {
+    position: absolute;
+    height: 100%;
+    line-height: r(34);
+    top: 0;
+    left: 0;
+    @include  f(16px);
+    display: inline-block;
+  }
+  span.iconfont {
+    position: absolute;
+    top: 0;
+    right: r(0);
+    @include  f(16px);
+    cursor: pointer;
+    line-height: r(40);
+    color: #f66;
+    width: 15%;
+    text-align: center;
+  }
+  .submit{
+    display:block;
+    width:100%;
+    margin:r(31) auto 0;
+    background: #4982FF;
+    border-radius: 4px;
+    height:r(44);
+    line-height:r(44) ;
+    font-size:r(18);
+    color:#fff;
+  }
+}
+
+input[type=button].mobile-pubtn,
+a.mobile-pubtn{
+   width: 100%;
+   height: r(45);
+   line-height: r(45);
+   text-align: center;
+   border-radius: r(4);
+   @include  f(18px);
+   color: $white;
+   background: #4982FF;
+   display: block;
+}
+input[type=button].pubtn-white,
+a.pubtn-white,
+a.pubtn-white:hover {
+  background: $white;
+  color: #FF0000;
+  box-shadow: 0 0 3px #ccc;
+}
+.bind-def-btn{
+  display: block;
+  width: 100%;
+  height: r(50);
+  line-height: r(50);
+  background: #4982FF;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: r(10);
+  color: $white;
+  cursor: pointer;
+  &.disabled{
+    background: #d1d1d1;
+  }
+}
+.confirm-btn-cancel{
+  border-right: 1px solid #e5e5e5;
+}
+.success-enter {
+  opacity: 0;
+  transform: translateY(50%);
+}
+.success-leave {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+.success-enter-active, .success-leave-active {
+  transition: all .5s;
+}
+.box{
+
+}
+.p-def{
+  padding: r(10);
+}
+.close-btn-radius{
+  width: r(25);
+  height: r(25);
+  background: url(~images/close-round.png) no-repeat;
+  background-size: 100% 100%;
+  margin-top: r(15);
+  opacity: 0;
+  animation: rotateIn 1s .5s forwards;
+}
